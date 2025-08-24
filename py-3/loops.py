@@ -12,7 +12,7 @@ for nickname in nicknames:
 print('range(<number>):')
 numbers = [2, 30, 837, 999, 1]
 for i in range(len(numbers)): # len genera el tamaño del rango
-    print('NO.', numbers[i])
+    print('#', numbers[i])
 
 # Los rangos se pueden invertir con reversed(range(x)) o tambien ordenar con sorted()
 # Tambien existe el metodo set() para evitar duplicados como JavaScript
@@ -36,6 +36,7 @@ for k, v in users.items():
 # Los bucles for o while pueden tener su propios bloques "else", estos solo se ejecutaran cuando termine las iteraciones o cuando no exista una exeption.
 else:
     print('EL bucle termino')
+
 
 # --------
 print('# --------')

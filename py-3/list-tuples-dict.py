@@ -1,3 +1,5 @@
+import math
+
 # LIST
 print("> LIST")
 
@@ -67,8 +69,10 @@ other_tuple = (1, "Edgar", ["+", "-", "*", "/"])
 other_tuple[2].append("%")
 print(other_tuple) # (1, "Edgar", ["+", "-", "*", "/", "%"])
 
+
 # --------
 print("# --------")
+
 
 # Dictionaries
 print("> DICTIONARIES")
@@ -116,6 +120,23 @@ for city, altitude in altitude_cities.items():
     print(f"Ciudad: {city}\nAltitud: {altitude} m")
 
 
-
 # --------
 print("# --------")
+
+
+# LIST COMPRENSIONS
+print("> LIST COMPRENSIONS")
+# Permiten crear listas de una manera mas limpia y concisa
+
+create_list_int_numbers = [number for number in range(10)]
+print(create_list_int_numbers) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Las list comprensions son un equivalente a la siguiente funcion:
+# number_to_power = list(map(lambda n: math.pow(n, 2), range(1, 12)))
+number_to_power = [math.pow(n, 2) for n in range(1, 12) if n % 2 != 1]
+
+print(number_to_power) # [4.0, 16.0, 36.0, 64.0, 100.0]
+
+letters_dictionary = { letter.upper() for letter in 'abcdefghijklmnopqrstuvwxyz' }
+
+print(letters_dictionary) # {'K', 'F', 'V', 'Q', 'U', 'R', 'E', 'C', 'A', 'M', 'S', 'O', 'J', 'X', 'W', 'T', 'I', 'H', 'Z', 'Y', 'L', 'P', 'D', 'N', 'B', 'G'}
