@@ -2,7 +2,6 @@ import math
 
 # FUNCTIONS
 print("> FUNCTIONS")
-# EL nombre de las funciones deben ser en snake_case.
 
 # LAMBDA
 # Funciones anonimas de una sola linea.
@@ -10,6 +9,7 @@ print("> LAMBDA")
 
 brands = { "Apple": "Cupertino, California", "Google": "Montain View, California", "Huawei": "Shenzhen, China", }
 
+# El nombre de las funciones deben ser snake_case sin importar si son de bloque o lambda.
 new_brands = list(map(lambda name: name[::-1], brands))
 print("New Brands", new_brands) # ["elppA", "elgooG", "gnusmaS"]
 
@@ -22,6 +22,7 @@ var_global = 0
 
 # Cuando se declara la funcion genera una tabla de simbolos local.
 # Ademas el nombre de la funcion es asociado con el objeto de la funcion en la tabla de simbolos.
+# Nota: Antes de utilizar las funciones deben ser declaradas.
 def fn():
     """
     Funcionamiento interno de las funciones en py.
